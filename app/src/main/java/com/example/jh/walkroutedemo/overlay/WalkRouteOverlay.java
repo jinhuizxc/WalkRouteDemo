@@ -59,6 +59,7 @@ public class WalkRouteOverlay extends RouteOverlay {
             mPolylineOptions.add(startPoint);
 			Log.e(TAG, "startPoint =" + startPoint);
             for (int i = 0; i < walkPaths.size(); i++) {
+                // 主要是这些轨迹点怎么来的？
                 WalkStep walkStep = walkPaths.get(i);
 				Log.e(TAG, "walkStep =" + walkStep);
                 LatLng latLng = AMapServicesUtil.convertToLatLng(walkStep
@@ -67,6 +68,7 @@ public class WalkRouteOverlay extends RouteOverlay {
 
 				// 加载步行路线marker
 				addWalkStationMarkers(walkStep, latLng);
+                // 绘制线条
                 addWalkPolyLines(walkStep);
 
             }
