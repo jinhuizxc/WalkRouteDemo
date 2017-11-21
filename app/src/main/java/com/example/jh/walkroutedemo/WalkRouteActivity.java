@@ -224,12 +224,12 @@ public class WalkRouteActivity extends AppCompatActivity implements RouteSearch.
                         @Override
                         public void onClick(View v) {
 //                            细节部分暂时不考虑
-//                            Intent intent = new Intent(mContext,
-//                                    WalkRouteDetailActivity.class);
-//                            intent.putExtra("walk_path", walkPath);
-//                            intent.putExtra("walk_result",
-//                                    mWalkRouteResult);
-//                            startActivity(intent);
+                            Intent intent = new Intent(mContext,
+                                    WalkRouteDetailActivity.class);
+                            intent.putExtra("walk_path", walkPath);
+                            intent.putExtra("walk_result",
+                                    mWalkRouteResult);
+                            startActivity(intent);
                         }
                     });
                 }else if(result != null && result.getPaths() == null){
